@@ -1,0 +1,17 @@
+{
+  "name": "principal-pagina_notificacion",
+  "version": "1.0.0",
+  "description": "![Design preview for the Notifications page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.69.0"
+  },
+  "scripts": {
+    "dev": "gulp dev"
+  },
+  "author": "Jean Carlo Gómez Narváez",
+  "license": "ISC"
+}

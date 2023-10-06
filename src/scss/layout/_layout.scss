@@ -1,0 +1,206 @@
+
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include m.tablet {
+        background-color: v.$blue-grayish-very-light;
+    }
+}
+
+.container {
+    padding: 1.5rem;
+    background-color: v.$white;
+
+    @include m.tablet {
+        max-width: 70%;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        border-radius: 1.5rem;
+        box-shadow: 0 0px 17px -16px v.$black;
+        padding: 2.5rem 3.5rem 1.5rem;
+    }
+
+    @include m.desktop {
+        max-width: 45%;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .header_notifications {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: v.$extrabold;
+            margin: 0;
+
+            @include m.tablet {
+                font-size: 2.8rem;
+            }
+        }
+    
+        .amount_notifications {
+            background: v.$blue;
+            padding: 0 1.3rem;
+            border-radius: .5rem;
+            
+            p {
+                color: v.$white;
+                font-size: 1.3rem;
+
+                @include m.tablet {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .mark_read {
+
+        p {
+            font-size: 1.5rem;
+            color: v.$blue-grayish-dark;
+
+            @include m.tablet {
+                font-size: 1.8rem;
+            }
+            
+            &:hover {
+                color: v.$blue;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+.container_notifications {
+    margin-top: 1.5rem;
+    
+    @include m.tablet {
+        margin-top: 2rem;
+    }
+}
+
+.notification {
+    display: grid;
+    grid-template-columns: 1fr 8fr auto;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: .8rem;
+    margin-bottom: 1rem;
+    
+    &.activo-bg {
+        background-color: v.$blue-grayish-very-light;
+    }
+
+    @include m.tablet {
+        gap: 0rem;
+    }
+
+    .notification_img {
+        max-width: 7rem;
+        
+        @include m.tablet {
+            max-width: 5.5rem;
+        }
+    }
+
+    .notification_body {
+
+        p {
+            margin: 0;
+            line-height: 1.8rem;
+            font-size: 1.5rem;
+            color: v.$blue-grayish-dark;
+
+            @include m.tablet {
+                font-size: 1.8rem;
+            }
+        }
+
+        .notification_name {
+            color: v.$black;
+            font-weight: v.$extrabold;
+
+            &:hover {
+                color: v.$blue;
+                cursor: pointer;
+            }
+        }
+    
+        .notification_action {
+            font-weight: v.$extrabold;
+
+            &:hover {
+                color: v.$blue;
+                cursor: pointer;
+            }
+        }
+    
+        .notification_point {
+            width: .8rem;
+            height: .8rem;
+            display: hidden;
+            border-radius: 50%;
+            background-color: v.$red;
+            margin-left: .3rem;
+            
+            &.activo-point {
+                display: inline-block;
+            }
+
+            @include m.tablet {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+
+        .notification_date {
+            margin-top: .5rem;
+            display: inline-block;
+            color: v.$blue-grayish;
+        }
+    }
+
+    .notification_message {
+        background-color: v.$white;
+        padding: 2rem;
+        border: 1px solid v.$blue-1-grayish-light;
+        border-radius: .5rem;
+        margin-top: 1.5rem;
+
+        p {
+            line-height: normal;
+        }
+        
+        @include m.tablet {
+            padding: 2.5rem;
+        }
+
+        &:hover {
+            background-color: v.$blue-1-grayish-light;
+            cursor: pointer;
+        }
+    }
+
+    .notification_img-comment {
+        width: 4.5rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+}
