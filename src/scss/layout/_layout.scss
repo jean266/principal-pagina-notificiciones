@@ -143,6 +143,10 @@ header {
         .notification_action {
             font-weight: v.$extrabold;
 
+            &.group {
+                color: v.$blue;
+            }
+
             &:hover {
                 color: v.$blue;
                 cursor: pointer;

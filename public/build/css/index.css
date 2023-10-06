@@ -505,6 +505,9 @@ header .mark_read p:hover {
 .notification .notification_body .notification_action {
   font-weight: 700;
 }
+.notification .notification_body .notification_action.group {
+  color: hsl(219, 85%, 26%);
+}
 .notification .notification_body .notification_action:hover {
   color: hsl(219, 85%, 26%);
   cursor: pointer;
